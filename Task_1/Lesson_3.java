@@ -7,6 +7,7 @@ public class Lesson_3 {
         checkfinger (5);
         checkfinger (1);
         checkfinger (2);
+        checkfinger(9);
     }
 
     public static void checkfinger(int num) {
@@ -26,6 +27,8 @@ public class Lesson_3 {
             case 5:
                 System.out.println("мизинец");
                 break;
+            default:
+                System.out.println("нет такого пальца!");
         }
     }
 }

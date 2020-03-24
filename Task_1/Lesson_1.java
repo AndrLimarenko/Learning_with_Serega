@@ -10,7 +10,7 @@ public class Lesson_1 {
         checkSeason(s);
     }
         public static void checkSeason(String season){
-        if ((season.equals("Winter")|(season.equals("winter")))){
+        if (season.equalsIgnoreCase("Winter")){
                 System.out.println("It's cold");
             }
     }
