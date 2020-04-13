@@ -1,6 +1,5 @@
 package Task_3;
 
-import java.util.ArrayList;
 
 public class Lesson_4 {
     public static void main(String[] args) {
@@ -8,17 +7,18 @@ public class Lesson_4 {
         System.out.println("Original string: " + str);
         String s = str.trim();
         s = s.replaceAll("( )+", " ");
-        System.out.println("2nd double value is: " + getSecondDoubleValue(s));
+        System.out.println("Last double value is: " + getSecondDoubleValue(s));
     }
 
     public static double getSecondDoubleValue(String text) {
         String[] arr = text.split(" ");
-        ArrayList<Double> res = new ArrayList<Double>();
-        for (int i = 0; i < arr.length; i++) {
+        double res = 0;
+        for (int i = arr.length - 1; i > 0; i--) {
             if (arr[i].contains("$")) {
-                res.add(Double.parseDouble(arr[i].substring(1, 4)));
+                res = Double.parseDouble((arr[i]).substring(1, 5));
+                break;
             }
         }
-        return res.get(1);
+        return res;
     }
 }
